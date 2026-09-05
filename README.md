@@ -60,3 +60,9 @@ so it follows the current GitHub avatar automatically.
 - Reduced the ALPINE project image size.
 - Corrected the UR5 repository link to acristoforetti-1-pixel/lab_myproject.
 - Added the SICURA GitHub repository link: anass03/Sicura.
+
+## v4b changes
+- Kept the v4 overall style as the base.
+- Reduced the ALPINE image further and switched it to a contain-based fit so the full image stays visible.
+- Fixed the orbit animation: the cyan dot now rotates, the outer orbit dot is brighter, and the middle orbit also gets a visible moving dot.
+- Slightly refreshed the GitHub avatar URL for the updated profile image.
