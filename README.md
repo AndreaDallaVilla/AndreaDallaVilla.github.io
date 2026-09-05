@@ -86,3 +86,11 @@ so it follows the current GitHub avatar automatically.
 - Shortened UR5, SICURA and RoadEye thumbnails to make them compact like the ALPINE thumbnail.
 - Updated the orbit labels to: ROS, AI, Hardware, IoT.
 - Updated the hero eyebrow to: Robotic Engineer.
+
+
+## v5 presenter version
+- Replaced the standard project-grid section with a custom sticky showcase.
+- Added a stylized UR5 that acts as a project presenter.
+- Only one project card is shown at a time.
+- Scrolling activates the next project card in the UR5's hand.
+- Included ALPINE, Distributed SpMV, NipponQuest, UR5, SICURA and RoadEye.
