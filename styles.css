@@ -1484,3 +1484,56 @@ footer {
     height: 185px;
   }
 }
+
+
+/* =========================================================
+   v4g — compact thumbnails and updated orbit labels
+   ========================================================= */
+
+/* Make UR5 / SICURA / RoadEye thumbnails short like the ALPINE panel */
+.card-thumbnail {
+  display: block;
+  width: 100%;
+  max-width: 220px !important;
+  height: 145px !important;
+  min-height: 0 !important;
+  margin: 18px 0 2px;
+  justify-self: start;
+  align-self: start;
+  padding: 10px !important;
+  border-radius: 18px;
+}
+
+.card-thumbnail-media {
+  border-radius: 10px;
+}
+
+.card-thumbnail::after {
+  inset: 10px !important;
+  border-radius: 10px;
+}
+
+.card-thumbnail-label {
+  right: 18px;
+  bottom: 16px;
+  font-size: 7.5px;
+}
+
+.project-card .card-actions {
+  margin-top: 18px;
+}
+
+/* Keep them compact on tablet/mobile too */
+@media (max-width: 980px) {
+  .card-thumbnail {
+    max-width: 220px !important;
+    height: 145px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .card-thumbnail {
+    max-width: 220px !important;
+    height: 145px !important;
+  }
+}

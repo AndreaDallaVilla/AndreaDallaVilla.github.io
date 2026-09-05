@@ -81,3 +81,8 @@ so it follows the current GitHub avatar automatically.
 ## v4f changes
 - Reduced the UR5, SICURA and RoadEye thumbnails so they match the ALPINE thumbnail proportions more closely.
 - Kept the rest of the v4e layout unchanged.
+
+## v4g changes
+- Shortened UR5, SICURA and RoadEye thumbnails to make them compact like the ALPINE thumbnail.
+- Updated the orbit labels to: ROS, AI, Hardware, IoT.
+- Updated the hero eyebrow to: Robotic Engineer.
