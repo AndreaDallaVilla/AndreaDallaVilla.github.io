@@ -112,3 +112,10 @@ On smaller screens the same content remains accessible with a simplified non-sti
 - Centered the whole UR5 presenter scene more clearly on screen.
 - Removed the confusing mini-bars near the project card.
 - Simplified and smoothed the robot/card motion.
+
+## v5.3 overlap fix
+- The visible project rail/cards were removed completely.
+- Invisible scroll anchors now drive the sticky UR5 animation.
+- Added a compact progress selector inside the presenter window.
+- Added section spacing and z-index isolation so the Technical Stack cannot overlap the animation.
+- Kept the entire presenter centered.

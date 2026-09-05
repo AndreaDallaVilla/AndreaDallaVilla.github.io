@@ -2388,3 +2388,286 @@ footer {
     font-size: 24px;
   }
 }
+
+
+/* =========================================================
+   v5.3 — fix overlap + clean centered scrollytelling
+   ========================================================= */
+
+.robot-showcase {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 140px;
+}
+
+.presenter-layout {
+  --presenter-height: min(760px, calc(100vh - 126px));
+  position: relative;
+  display: block !important;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/*
+  The scene stays sticky while invisible scroll anchors move underneath it.
+  This removes the visible side rail/cards and, crucially, reserves enough
+  section height so the next section cannot overlap the presenter.
+*/
+.presenter-sticky {
+  position: sticky;
+  top: 92px;
+  z-index: 5;
+  width: 100%;
+  height: var(--presenter-height) !important;
+  min-height: 650px !important;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.presenter-window {
+  width: min(100%, 1120px);
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+/* Invisible scroll anchors: they drive the animation but are not UI. */
+.project-scroll-track {
+  position: relative;
+  z-index: 1;
+  display: block !important;
+  max-width: none !important;
+  margin: calc(-1 * var(--presenter-height)) 0 0 !important;
+  padding-top: 10vh;
+  pointer-events: none;
+}
+
+.project-trigger {
+  width: 100%;
+  height: 74vh;
+  min-height: 520px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: none !important;
+  overflow: hidden;
+}
+
+.project-trigger > * {
+  visibility: hidden !important;
+}
+
+/* Keep the scene visually centered. */
+.repo-stack {
+  left: 11%;
+  bottom: 10%;
+}
+
+.ur5-robot {
+  left: 11%;
+  bottom: 6%;
+  width: 41%;
+  max-width: 455px;
+  min-width: 355px;
+}
+
+.gripped-project {
+  left: 54%;
+  right: auto;
+  top: 50%;
+  width: min(405px, 37%);
+  max-width: 405px;
+  min-width: 335px;
+  transform: translate(0, -50%);
+}
+
+/* No random bars / fake gripper overlays around the project card. */
+.grip-contact {
+  display: none !important;
+}
+
+/* Compact project navigation lives inside the animation, not beside/below it. */
+.presenter-progress {
+  position: absolute;
+  z-index: 8;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: calc(100% - 36px);
+  padding: 6px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 999px;
+  background: rgba(8,13,19,.80);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.22);
+}
+
+.presenter-progress-item {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: transparent;
+  color: #6f7b8a;
+  font-family: "DM Mono", monospace;
+  transition: color .22s ease, background .22s ease, transform .22s ease;
+}
+
+.presenter-progress-item span {
+  font-size: 7px;
+  opacity: .72;
+}
+
+.presenter-progress-item b {
+  font-size: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.presenter-progress-item:hover {
+  color: #c9d3df;
+  background: rgba(255,255,255,.04);
+}
+
+.presenter-progress-item.active {
+  color: #071016;
+  background: linear-gradient(135deg, #dff9ff, #76e3ff);
+  transform: translateY(-1px);
+}
+
+/* Ensure the next section starts cleanly below the sticky experience. */
+.robot-showcase + .stack {
+  position: relative;
+  z-index: 10;
+  background: var(--bg);
+  box-shadow: 0 -40px 70px rgba(8,11,16,.96);
+}
+
+@media (max-width: 1120px) {
+  .presenter-layout {
+    --presenter-height: 720px;
+  }
+
+  .presenter-sticky {
+    top: 78px;
+    min-height: 620px !important;
+  }
+
+  .project-trigger {
+    height: 68vh;
+    min-height: 460px !important;
+  }
+
+  .robot-showcase {
+    padding-bottom: 110px;
+  }
+}
+
+@media (max-width: 860px) {
+  .presenter-layout {
+    --presenter-height: 760px;
+  }
+
+  .presenter-sticky {
+    position: sticky;
+    top: 70px;
+  }
+
+  .presenter-window {
+    height: 100% !important;
+  }
+
+  .ur5-robot {
+    left: 50%;
+    bottom: -6px;
+    width: 88%;
+    max-width: 490px;
+    min-width: 0;
+    transform: translateX(-62%);
+  }
+
+  .gripped-project {
+    left: 50%;
+    top: 42px;
+    width: min(92%, 385px);
+    min-width: 0;
+    transform: translateX(-50%);
+  }
+
+  .repo-stack {
+    left: 6%;
+    bottom: 7%;
+    transform: scale(.84);
+    transform-origin: left bottom;
+  }
+
+  .presenter-progress {
+    gap: 3px;
+    bottom: 12px;
+  }
+
+  .presenter-progress-item {
+    padding: 7px 8px;
+  }
+
+  .presenter-progress-item b {
+    display: none;
+  }
+
+  .presenter-progress-item span {
+    font-size: 8px;
+  }
+
+  .project-trigger {
+    height: 68vh;
+    min-height: 460px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .presenter-layout {
+    --presenter-height: 720px;
+  }
+
+  .presenter-sticky {
+    top: 58px;
+  }
+
+  .presenter-caption {
+    top: 12px;
+    max-width: calc(100% - 24px);
+  }
+
+  .gripped-project {
+    top: 46px;
+    width: calc(100% - 22px);
+  }
+
+  .repo-stack {
+    bottom: 5%;
+  }
+
+  .robot-showcase {
+    padding-bottom: 90px;
+  }
+
+  .project-trigger {
+    height: 64vh;
+    min-height: 420px !important;
+  }
+}

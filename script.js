@@ -349,3 +349,34 @@ function initPresenter() {
 }
 
 initPresenter();
+
+
+// v5.3 centered progress control
+const progressItems = [...document.querySelectorAll(".presenter-progress-item")];
+
+function updatePresenterProgress(index) {
+  progressItems.forEach((item, i) => item.classList.toggle("active", i === index));
+}
+
+// Extend the existing fillPresenter without changing its content logic.
+const originalFillPresenter = fillPresenter;
+fillPresenter = function(index) {
+  originalFillPresenter(index);
+  updatePresenterProgress(index);
+};
+
+progressItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const index = Number(item.dataset.index);
+    if (!Number.isFinite(index)) return;
+
+    const target = triggerEls[index];
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      switchPresenter(index);
+    }
+  });
+});
+
+updatePresenterProgress(activePresenterIndex);
