@@ -49,3 +49,14 @@ so it follows the current GitHub avatar automatically.
 - Added SICURA.
 - UR5 Pick & Place now has an external project link.
 - Removed the RoadEye 'project in development' label.
+
+## v3 changes
+- Added YouTube video links to ALPINE, UR5, SICURA and RoadEye cards.
+- ALPINE image now opens its YouTube results.
+- Added YouTube to the contact section.
+- SICURA uses the directly indexed video URL.
+
+## v4 changes
+- Reduced the ALPINE project image size.
+- Corrected the UR5 repository link to acristoforetti-1-pixel/lab_myproject.
+- Added the SICURA GitHub repository link: anass03/Sicura.
