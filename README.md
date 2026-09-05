@@ -77,3 +77,7 @@ so it follows the current GitHub avatar automatically.
 - The orbiting dots now move on pure circular paths outside the profile image.
 - The labels are fixed outside the orbit system so they do not pass over the face.
 - Updated UR5, SICURA and RoadEye thumbnails to use the same size and visual treatment as the ALPINE card.
+
+## v4f changes
+- Reduced the UR5, SICURA and RoadEye thumbnails so they match the ALPINE thumbnail proportions more closely.
+- Kept the rest of the v4e layout unchanged.
