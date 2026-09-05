@@ -67,7 +67,7 @@
 
         <div class="mini-stats" aria-label="GitHub profile stats">
           <div>
-            <strong id="repo-count">5</strong>
+            <strong id="repo-count">6</strong>
             <span>public repos</span>
           </div>
           <div>
@@ -95,19 +95,6 @@
           <div class="floating-tag tag-2"><span>ROS</span></div>
           <div class="floating-tag tag-3"><span>Python</span></div>
           <div class="floating-tag tag-4"><span>Control</span></div>
-        </div>
-
-        <div class="terminal-card">
-          <div class="terminal-top">
-            <span></span><span></span><span></span>
-            <p>andrea@robotics:~</p>
-          </div>
-          <pre><code><span class="muted">$</span> focus --now
-<span class="accent">›</span> robot control & autonomy
-<span class="accent">›</span> perception & state estimation
-<span class="accent">›</span> embedded mechatronics
-<span class="accent">›</span> parallel computing
-<span class="success">✓</span> build → test → iterate</code></pre>
         </div>
       </div>
     </section>
@@ -185,19 +172,13 @@
           </div>
         </div>
 
-        <div class="project-art alpine-art" aria-hidden="true">
-          <div class="mountain mountain-a"></div>
-          <div class="mountain mountain-b"></div>
-          <div class="rope rope-left"></div>
-          <div class="rope rope-right"></div>
-          <div class="robot">
-            <span class="thruster t1"></span>
-            <span class="thruster t2"></span>
-            <span class="body"></span>
-            <span class="leg"></span>
-          </div>
-          <span class="art-label">ALPINE / 01</span>
-        </div>
+        <a class="project-art alpine-photo" href="https://github.com/alpine-robot" target="_blank" rel="noreferrer" aria-label="Open the ALPINE Robot project">
+          <img src="assets/alpine-robot.jpeg" alt="ALPINE climbing robot in a mountain environment" />
+          <span class="project-image-overlay">
+            <span class="art-label">ALPINE / 01</span>
+            <span class="image-open">Open project ↗</span>
+          </span>
+        </a>
       </article>
 
       <div class="project-grid">
@@ -268,12 +249,36 @@
           <div class="chips">
             <span>ROS</span><span>Gazebo</span><span>YOLO</span><span>ZED</span><span>IK</span>
           </div>
-          <span class="card-link card-link-muted">Academic project</span>
+          <a class="card-link" href="https://github.com/AndreaDallaVilla/lab_myproject" target="_blank" rel="noreferrer">
+            Open project
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </article>
 
         <article class="project-card reveal">
           <div class="card-top">
             <span class="project-index">05</span>
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3 5 6v5c0 4.5 2.7 8.2 7 10 4.3-1.8 7-5.5 7-10V6l-7-3Z"/>
+              <path d="m9.5 12 1.7 1.7 3.7-4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="project-type">Embedded Systems · Smart Security</span>
+            <h3>SICURA</h3>
+            <p>
+              Smart security prototype built around sensing, local actuation and
+              real-time alerts, developed as a complete embedded-mechatronic system.
+            </p>
+          </div>
+          <div class="chips">
+            <span>Embedded</span><span>Sensors</span><span>Actuation</span><span>IoT</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-index">06</span>
             <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 17h16M7 17l1-6h8l1 6M9 11V8h6v3"/>
               <circle cx="8" cy="19" r="1"/><circle cx="16" cy="19" r="1"/>
@@ -290,7 +295,6 @@
           <div class="chips">
             <span>Product Design</span><span>Maps</span><span>UX</span><span>Web/App</span>
           </div>
-          <span class="card-link card-link-muted">Project in development</span>
         </article>
       </div>
     </section>

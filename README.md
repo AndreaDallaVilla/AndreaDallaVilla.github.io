@@ -41,3 +41,11 @@ The profile photo is loaded directly from:
 `https://github.com/AndreaDallaVilla.png`
 
 so it follows the current GitHub avatar automatically.
+
+
+## v2 changes
+- Removed the terminal/focus card from the hero.
+- Added the supplied ALPINE image.
+- Added SICURA.
+- UR5 Pick & Place now has an external project link.
+- Removed the RoadEye 'project in development' label.
