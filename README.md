@@ -119,3 +119,10 @@ On smaller screens the same content remains accessible with a simplified non-sti
 - Added a compact progress selector inside the presenter window.
 - Added section spacing and z-index isolation so the Technical Stack cannot overlap the animation.
 - Kept the entire presenter centered.
+
+## v5.4 scroll-lock presenter
+- Stronger robot motion with clearer pick / carry / present phases.
+- Animated gripper fingers during pickup.
+- The project bar stays fully visible and clickable at the bottom of the presenter.
+- While the Work section is active, scrolling cycles through the projects first.
+- The page continues to the next section only after the last project.
