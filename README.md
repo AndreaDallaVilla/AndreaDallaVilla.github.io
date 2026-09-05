@@ -106,3 +106,9 @@ On smaller screens the same content remains accessible with a simplified non-sti
 - smoother UR5 motion with pick/carry/present phases
 - better card transition from the stack to the gripper
 - click or scroll the project steps to switch cards
+
+## v5.2 centered cleanup
+- Removed the side project rail feeling: project triggers are now centered cards below the animation.
+- Centered the whole UR5 presenter scene more clearly on screen.
+- Removed the confusing mini-bars near the project card.
+- Simplified and smoothed the robot/card motion.

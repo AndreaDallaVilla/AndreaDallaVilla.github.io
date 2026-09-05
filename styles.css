@@ -2144,3 +2144,247 @@ footer {
     min-height: 140px;
   }
 }
+
+
+/* =========================================================
+   v5.2 — centered presenter cleanup
+   ========================================================= */
+
+/* center the whole project experience instead of using a sidebar */
+.presenter-layout {
+  display: block !important;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.presenter-sticky {
+  position: sticky;
+  top: 96px;
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.presenter-window {
+  width: min(100%, 1120px);
+  height: 760px;
+  min-height: 760px;
+  margin: 0 auto;
+}
+
+.presenter-grid {
+  background-size: 48px 48px;
+}
+
+.repo-stack {
+  left: 10%;
+  bottom: 9%;
+  transform: scale(1.04);
+  transform-origin: left bottom;
+}
+
+.ur5-robot {
+  left: 8%;
+  bottom: 5%;
+  width: 42%;
+  max-width: 460px;
+  min-width: 360px;
+}
+
+.gripped-project {
+  left: 53%;
+  right: auto;
+  top: 50%;
+  width: min(410px, 38%);
+  max-width: 410px;
+  min-width: 340px;
+  transform: translate(0, -50%);
+}
+
+.project-motion-layer {
+  transform-origin: 8% 55% !important;
+  will-change: transform, opacity, filter;
+}
+
+.gripped-media {
+  height: 205px;
+}
+
+.gripped-content h3 {
+  font-size: clamp(30px, 3vw, 42px);
+}
+
+.gripped-content p {
+  font-size: 13px;
+}
+
+.presenter-caption {
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%);
+}
+
+/* remove the confusing little bars near the project card */
+.grip-contact {
+  display: none !important;
+}
+
+/* remove side-scrolling sidebar feel and make project selectors proper centered cards */
+.project-scroll-track {
+  max-width: 900px;
+  margin: 26px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-trigger {
+  min-height: 175px !important;
+  padding: 22px !important;
+  border: 1px solid var(--line) !important;
+  border-left: 1px solid var(--line) !important;
+  border-radius: 20px;
+  background: rgba(255,255,255,.02);
+  align-items: flex-start !important;
+  transition: border-color .25s ease, background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.project-trigger > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(255,255,255,.03);
+  color: #7e8a99;
+}
+
+.project-trigger > div {
+  flex: 1 1 auto;
+}
+
+.project-trigger small {
+  margin-bottom: 10px;
+  color: #7f8b9b;
+}
+
+.project-trigger h3 {
+  font-size: 27px;
+  color: #8f99a7;
+  transform: none !important;
+}
+
+.project-trigger.active {
+  border-color: rgba(105,226,255,.38) !important;
+  background: linear-gradient(145deg, rgba(105,226,255,.07), rgba(255,255,255,.028));
+  box-shadow: 0 16px 34px rgba(0,0,0,.16);
+  transform: translateY(-2px);
+}
+
+.project-trigger.active > span {
+  color: var(--accent);
+  border-color: rgba(105,226,255,.22);
+  background: rgba(105,226,255,.08);
+}
+
+.project-trigger.active h3 {
+  color: var(--text);
+}
+
+/* smooth stack pulse while switching */
+.presenter-window.is-switching .stack-card {
+  animation: stack-pulse 0.62s ease;
+}
+
+@keyframes stack-pulse {
+  0%, 100% { transform: translate(0,0) rotate(-2deg); }
+  50% { transform: translate(3px,-4px) rotate(-1deg); }
+}
+
+/* subtler idle motion */
+.presenter-window:not(.is-switching) .ur5-robot svg {
+  animation: robot-idle-float-soft 4.8s ease-in-out infinite;
+  transform-origin: 36% 82%;
+}
+
+@keyframes robot-idle-float-soft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+@media (max-width: 1120px) {
+  .presenter-sticky {
+    position: relative;
+    top: 0;
+  }
+
+  .presenter-window {
+    height: 730px;
+    min-height: 730px;
+  }
+
+  .project-scroll-track {
+    max-width: 860px;
+  }
+}
+
+@media (max-width: 860px) {
+  .presenter-window {
+    height: 780px;
+    min-height: 780px;
+  }
+
+  .ur5-robot {
+    left: 50%;
+    bottom: 0;
+    width: 88%;
+    max-width: 500px;
+    min-width: 0;
+    transform: translateX(-60%);
+  }
+
+  .gripped-project {
+    left: 50%;
+    top: 36px;
+    width: min(92%, 390px);
+    min-width: 0;
+    transform: translateX(-50%);
+  }
+
+  .repo-stack {
+    left: 6%;
+    bottom: 6%;
+    transform: scale(.88);
+  }
+
+  .project-scroll-track {
+    grid-template-columns: 1fr;
+  }
+
+  .project-trigger {
+    min-height: 120px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .presenter-window {
+    height: 735px;
+    min-height: 735px;
+  }
+
+  .presenter-caption {
+    max-width: calc(100% - 24px);
+    width: max-content;
+  }
+
+  .gripped-media {
+    height: 185px;
+  }
+
+  .project-trigger h3 {
+    font-size: 24px;
+  }
+}
