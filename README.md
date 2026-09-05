@@ -86,3 +86,17 @@ so it follows the current GitHub avatar automatically.
 - Shortened UR5, SICURA and RoadEye thumbnails to make them compact like the ALPINE thumbnail.
 - Updated the orbit labels to: ROS, AI, Hardware, IoT.
 - Updated the hero eyebrow to: Robotic Engineer.
+
+
+## v5 real presenter
+This version keeps the v4g overall portfolio style but completely replaces the project grid.
+
+Desktop behavior:
+- a sticky UR5 stays on screen;
+- a physical-looking stack of project cards sits behind the robot;
+- exactly one project card is aligned with the gripper;
+- when a new project step reaches the viewport, the current card slides away;
+- the next card visibly travels from the stack toward the robot's hand;
+- the UR5 joints change pose at every project.
+
+On smaller screens the same content remains accessible with a simplified non-sticky layout.
