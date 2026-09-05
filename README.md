@@ -71,3 +71,9 @@ so it follows the current GitHub avatar automatically.
 - Moved all orbit paths farther outside the profile photo so dots and labels no longer pass across the face.
 - Matched each rotator radius exactly to its visible ring.
 - Added the supplied video thumbnails for UR5, SICURA and RoadEye using the same compact visual treatment as ALPINE.
+
+## v4e changes
+- Rebuilt the orbit visuals again so the rings are circular and centered around the avatar.
+- The orbiting dots now move on pure circular paths outside the profile image.
+- The labels are fixed outside the orbit system so they do not pass over the face.
+- Updated UR5, SICURA and RoadEye thumbnails to use the same size and visual treatment as the ALPINE card.

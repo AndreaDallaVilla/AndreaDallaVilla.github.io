@@ -1228,3 +1228,230 @@ footer {
     height: 180px;
   }
 }
+
+
+/* =========================================================
+   v4e — circular orbit system + thumbnails matching ALPINE
+   ========================================================= */
+
+/* ---------- Hero orbit system ---------- */
+.hero-visual {
+  overflow: visible;
+  padding-inline: 30px;
+}
+
+.orbital-card-circular {
+  width: min(460px, 100%);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+
+.orbital-card-circular::before {
+  content: "";
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(105,226,255,.14), rgba(141,125,255,.035) 56%, transparent 72%);
+  filter: blur(4px);
+}
+
+.orbit-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.orbit-ring-1 { width: 74%; height: 74%; border: 1px solid rgba(255,255,255,.12); }
+.orbit-ring-2 { width: 88%; height: 88%; border: 1px dashed rgba(255,255,255,.12); }
+.orbit-ring-3 { width: 102%; height: 102%; border: 1px solid rgba(105,226,255,.10); }
+.orbit-ring-4 { width: 116%; height: 116%; border: 1px solid rgba(255,255,255,.07); }
+
+.orbit-runner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform-origin: center center;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.orbit-runner-1 {
+  width: 74%; height: 74%;
+  margin-left: -37%; margin-top: -37%;
+  animation: orbit-spin-cw 16s linear infinite;
+}
+.orbit-runner-2 {
+  width: 88%; height: 88%;
+  margin-left: -44%; margin-top: -44%;
+  animation: orbit-spin-ccw 22s linear infinite;
+}
+.orbit-runner-3 {
+  width: 102%; height: 102%;
+  margin-left: -51%; margin-top: -51%;
+  animation: orbit-spin-cw 28s linear infinite;
+}
+.orbit-runner-4 {
+  width: 116%; height: 116%;
+  margin-left: -58%; margin-top: -58%;
+  animation: orbit-spin-ccw 35s linear infinite;
+}
+
+.orbit-runner .orbit-dot {
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-cyan {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(105,226,255,.08), 0 0 22px rgba(105,226,255,.90);
+}
+.dot-green {
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(141,247,199,.08), 0 0 18px rgba(141,247,199,.70);
+}
+.dot-violet {
+  background: #9b8dff;
+  box-shadow: 0 0 0 4px rgba(155,141,255,.08), 0 0 20px rgba(155,141,255,.82);
+}
+.dot-white {
+  background: #f4f7fb;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.05), 0 0 18px rgba(255,255,255,.44);
+}
+
+.orbit-label {
+  position: absolute;
+  z-index: 3;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(10,14,20,.88);
+  backdrop-filter: blur(12px);
+  color: #d3dae5;
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+  font: 500 9px/1 "DM Mono", monospace;
+  white-space: nowrap;
+}
+
+.orbit-label-1 { left: -2%; top: 22%; }
+.orbit-label-2 { right: -3%; top: 40%; }
+.orbit-label-3 { left: 8%; bottom: 11%; }
+.orbit-label-4 { right: -2%; bottom: 17%; }
+
+@keyframes orbit-spin-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes orbit-spin-ccw {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.orbital-card-circular .avatar-shell {
+  width: 45%;
+  z-index: 2;
+}
+.orbital-card-circular .avatar {
+  object-position: center center;
+}
+
+/* Hide any previous orbit markup if cache mixes versions */
+.orbital-card-circular .orbit,
+.orbital-card-circular .floating-tag,
+.orbital-card-circular .orbit-rotator,
+.orbital-card-circular .orbit-item,
+.orbital-card-circular .orbit-tag,
+.orbital-card-circular .orbit-dot:not(.dot-cyan):not(.dot-green):not(.dot-violet):not(.dot-white) {
+  display: none !important;
+}
+
+@media (max-width: 720px) {
+  .hero-visual { min-height: 410px; padding-inline: 12px; }
+  .orbital-card-circular { width: min(390px, 96vw); }
+  .orbit-ring-4, .orbit-runner-4 { display: none; }
+  .orbit-label { font-size: 8px; padding: 7px 10px; }
+  .orbit-label-1 { left: 1%; top: 23%; }
+  .orbit-label-2 { right: -1%; top: 40%; }
+  .orbit-label-3 { left: 9%; bottom: 10%; }
+  .orbit-label-4 { display: none; }
+}
+
+@media (max-width: 430px) {
+  .orbit-label { display: none; }
+}
+
+/* ---------- Thumbnails same family as ALPINE ---------- */
+.card-thumbnail {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 185px;
+  margin: 20px 0 2px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.012));
+  padding: 12px;
+}
+
+.card-thumbnail-media {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: #0a0f16;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  min-height: 0 !important;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  background: #0a0f16;
+  transition: transform .35s cubic-bezier(.22,.61,.36,1), filter .35s ease;
+}
+
+.card-thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, transparent 62%, rgba(5,8,12,.72) 100%);
+  pointer-events: none;
+}
+
+.card-thumbnail-label {
+  position: absolute;
+  z-index: 2;
+  right: 22px;
+  bottom: 20px;
+  color: rgba(255,255,255,.92);
+  font: 500 8px/1 "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.card-thumbnail:hover img {
+  transform: scale(1.012);
+  filter: brightness(1.04);
+}
+
+@media (max-width: 720px) {
+  .card-thumbnail { height: 185px; }
+}
