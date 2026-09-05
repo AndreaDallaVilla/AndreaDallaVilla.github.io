@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080b10" />
+  <meta name="description" content="Andrea Dalla Villa — Robotics, control, embedded systems and high-performance computing." />
+  <meta property="og:title" content="Andrea Dalla Villa — Robotics & Engineering" />
+  <meta property="og:description" content="Robotics, control, perception, embedded systems and high-performance computing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://github.com/AndreaDallaVilla.png" />
+  <title>Andrea Dalla Villa — Robotics & Engineering</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Andrea Dalla Villa home">
+      <span class="brand-mark">AD</span>
+      <span class="brand-name">Andrea Dalla Villa</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="https://github.com/AndreaDallaVilla" target="_blank" rel="noreferrer">
+      GitHub
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Robotics · Control · Embedded · HPC</p>
+
+        <h1>
+          I build machines<br />
+          that <span class="gradient-text">move with intent.</span>
+        </h1>
+
+        <p class="hero-text">
+          Computer Engineering student focused on robotics and intelligent systems —
+          from low-level actuation and state estimation to perception, planning,
+          simulation and real-robot experiments.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">
+            Explore my work
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+
+          <a class="button button-secondary" href="https://www.linkedin.com/in/andrea-dalla-villa-00bb23398/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="mini-stats" aria-label="GitHub profile stats">
+          <div>
+            <strong id="repo-count">5</strong>
+            <span>public repos</span>
+          </div>
+          <div>
+            <strong>UniTN</strong>
+            <span>Computer Engineering</span>
+          </div>
+          <div>
+            <strong>ROS</strong>
+            <span>real + simulation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbital-card">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+
+          <div class="avatar-shell">
+            <img src="https://github.com/AndreaDallaVilla.png" alt="Andrea Dalla Villa" class="avatar" />
+          </div>
+
+          <div class="floating-tag tag-1"><span>C++</span></div>
+          <div class="floating-tag tag-2"><span>ROS</span></div>
+          <div class="floating-tag tag-3"><span>Python</span></div>
+          <div class="floating-tag tag-4"><span>Control</span></div>
+        </div>
+
+        <div class="terminal-card">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+            <p>andrea@robotics:~</p>
+          </div>
+          <pre><code><span class="muted">$</span> focus --now
+<span class="accent">›</span> robot control & autonomy
+<span class="accent">›</span> perception & state estimation
+<span class="accent">›</span> embedded mechatronics
+<span class="accent">›</span> parallel computing
+<span class="success">✓</span> build → test → iterate</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-label reveal">01 — About</div>
+
+      <div class="about-layout">
+        <div class="about-heading reveal">
+          <h2>Engineering across the full stack.</h2>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="lead">
+            I like projects where software has to survive contact with the physical world.
+          </p>
+          <p>
+            My work spans robotics, control, perception, embedded systems and high-performance
+            computing. I enjoy connecting mathematical models with implementation: designing
+            control logic, integrating sensors and actuators, building ROS pipelines, validating
+            in simulation, and then making the system work on real hardware.
+          </p>
+          <p>
+            I am especially interested in autonomous robots for challenging environments,
+            reliable mechatronic systems and computational tools that make complex machines
+            more capable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-label">02 — Selected work</div>
+          <h2>Projects I care about.</h2>
+        </div>
+        <a class="text-link" href="https://github.com/AndreaDallaVilla?tab=repositories" target="_blank" rel="noreferrer">
+          All repositories
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <article class="project project-featured reveal">
+        <div class="project-index">01</div>
+
+        <div class="project-main">
+          <div class="project-kicker">
+            <span class="project-type">Bachelor thesis · Robotics</span>
+            <span class="project-year">2026</span>
+          </div>
+
+          <h3>ALPINE — Climbing Robot</h3>
+          <p>
+            High-level integration and experimental work for a climbing robot designed for
+            mountain environments. My thesis work connects attitude control, rope/winch
+            coordination, odometry and high-level command logic into a repeatable real-robot
+            sequence.
+          </p>
+
+          <div class="chips">
+            <span>ROS</span><span>C++</span><span>Python</span><span>Control</span>
+            <span>State Estimation</span><span>Real Robot</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/AndreaDallaVilla/Bachelor-thesis" target="_blank" rel="noreferrer">
+              Thesis repository
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a href="https://github.com/alpine-robot" target="_blank" rel="noreferrer">
+              ALPINE project
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-art alpine-art" aria-hidden="true">
+          <div class="mountain mountain-a"></div>
+          <div class="mountain mountain-b"></div>
+          <div class="rope rope-left"></div>
+          <div class="rope rope-right"></div>
+          <div class="robot">
+            <span class="thruster t1"></span>
+            <span class="thruster t2"></span>
+            <span class="body"></span>
+            <span class="leg"></span>
+          </div>
+          <span class="art-label">ALPINE / 01</span>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-index">02</span>
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 19V5m5 14V9m5 10V3m5 16v-7"/>
+            </svg>
+          </div>
+          <div>
+            <span class="project-type">Parallel Computing</span>
+            <h3>Distributed SpMV</h3>
+            <p>
+              Shared- and distributed-memory sparse matrix–vector multiplication,
+              exploring OpenMP scheduling, MPI decomposition and strong/weak scaling.
+            </p>
+          </div>
+          <div class="chips">
+            <span>C</span><span>OpenMP</span><span>MPI</span><span>HPC</span>
+          </div>
+          <a class="card-link" href="https://github.com/AndreaDallaVilla/PARCO-Computing-2026-242637" target="_blank" rel="noreferrer">
+            View repository
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-index">03</span>
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 2v4m8-4v4M3 10h18M5 6h14a2 2 0 0 1 2 2v11H3V8a2 2 0 0 1 2-2Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="project-type">FPGA · Digital Design</span>
+            <h3>NipponQuest</h3>
+            <p>
+              A complete FPGA game for the Nexys 4 DDR board, built in VHDL with
+              hardware-oriented game logic and video output.
+            </p>
+          </div>
+          <div class="chips">
+            <span>VHDL</span><span>FPGA</span><span>Vivado</span><span>Digital Logic</span>
+          </div>
+          <a class="card-link" href="https://github.com/AndreaDallaVilla/NipponQuest_FPGAgame" target="_blank" rel="noreferrer">
+            View repository
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-index">04</span>
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 5h10l2 4-7 10L5 9l2-4Z"/>
+              <path d="M5 9h14M9 5l3 14 3-14"/>
+            </svg>
+          </div>
+          <div>
+            <span class="project-type">Robot Perception · Manipulation</span>
+            <h3>UR5 Pick & Place</h3>
+            <p>
+              Autonomous object detection and manipulation pipeline using a UR5,
+              RGB-D perception, inverse kinematics and ROS/Gazebo integration.
+            </p>
+          </div>
+          <div class="chips">
+            <span>ROS</span><span>Gazebo</span><span>YOLO</span><span>ZED</span><span>IK</span>
+          </div>
+          <span class="card-link card-link-muted">Academic project</span>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="card-top">
+            <span class="project-index">05</span>
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 17h16M7 17l1-6h8l1 6M9 11V8h6v3"/>
+              <circle cx="8" cy="19" r="1"/><circle cx="16" cy="19" r="1"/>
+            </svg>
+          </div>
+          <div>
+            <span class="project-type">Software Engineering · Mobility</span>
+            <h3>RoadEye</h3>
+            <p>
+              A road-safety reporting platform concept focused on geolocated alerts,
+              incident prioritization, authority workflows and a clear mobile-first UX.
+            </p>
+          </div>
+          <div class="chips">
+            <span>Product Design</span><span>Maps</span><span>UX</span><span>Web/App</span>
+          </div>
+          <span class="card-link card-link-muted">Project in development</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section stack" id="stack">
+      <div class="section-label reveal">03 — Technical stack</div>
+
+      <div class="stack-layout">
+        <div class="stack-heading reveal">
+          <h2>Tools for turning ideas into working systems.</h2>
+          <p>
+            I choose tools around the problem — from microcontrollers and control loops
+            to robot middleware, computer vision and distributed computing.
+          </p>
+        </div>
+
+        <div class="stack-groups">
+          <div class="stack-group reveal">
+            <span class="stack-number">01</span>
+            <div>
+              <h3>Robotics & Control</h3>
+              <p>ROS / ROS 2, Gazebo, RViz, kinematics, inverse kinematics, state estimation, feedback control</p>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <span class="stack-number">02</span>
+            <div>
+              <h3>Software</h3>
+              <p>C++, C, Python, Java, MATLAB, Git, Linux, Docker</p>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <span class="stack-number">03</span>
+            <div>
+              <h3>Perception & Embedded</h3>
+              <p>OpenCV, YOLO, RGB-D cameras, ESP32, UART, PWM, sensors, actuator integration</p>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <span class="stack-number">04</span>
+            <div>
+              <h3>Computing & Hardware</h3>
+              <p>OpenMP, MPI, FPGA, VHDL, Vivado, parallel performance analysis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section philosophy">
+      <div class="quote-card reveal">
+        <span class="quote-mark">“</span>
+        <p>Make it understandable. Make it testable. Then make it work on the real machine.</p>
+        <span class="quote-caption">My engineering approach</span>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-panel reveal">
+        <div>
+          <div class="section-label">04 — Contact</div>
+          <h2>Let’s build something that moves.</h2>
+          <p>
+            Interested in robotics, autonomous systems, controls or a technically ambitious
+            project? You can find my work on GitHub or reach me directly.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="contact-row" href="mailto:dallavilla.a@gmail.com">
+            <span>
+              <small>Email</small>
+              dallavilla.a@gmail.com
+            </span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+
+          <a class="contact-row" href="https://github.com/AndreaDallaVilla" target="_blank" rel="noreferrer">
+            <span>
+              <small>GitHub</small>
+              @AndreaDallaVilla
+            </span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+
+          <a class="contact-row" href="https://www.linkedin.com/in/andrea-dalla-villa-00bb23398/" target="_blank" rel="noreferrer">
+            <span>
+              <small>LinkedIn</small>
+              Andrea Dalla Villa
+            </span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Andrea Dalla Villa</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
