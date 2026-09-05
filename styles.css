@@ -1057,3 +1057,174 @@ footer {
     padding: 10px;
   }
 }
+
+
+/* =========================================================
+   v4d — orbit paths stay outside the profile image
+   ========================================================= */
+
+.orbital-card-fixed {
+  width: min(470px, 100%);
+}
+
+/* Keep all rings outside the avatar; the old inner ring was too close */
+.ring-1 {
+  width: 84%;
+  height: 84%;
+}
+
+.ring-2 {
+  width: 96%;
+  height: 96%;
+}
+
+.ring-3 {
+  width: 108%;
+  height: 108%;
+}
+
+.ring-4 {
+  width: 120%;
+  height: 120%;
+}
+
+/* Match rotators exactly to their visible rings */
+.orbit-rotator-1 {
+  width: 84%;
+  height: 84%;
+  margin-left: -42%;
+  margin-top: -42%;
+}
+
+.orbit-rotator-2 {
+  width: 96%;
+  height: 96%;
+  margin-left: -48%;
+  margin-top: -48%;
+}
+
+.orbit-rotator-3 {
+  width: 108%;
+  height: 108%;
+  margin-left: -54%;
+  margin-top: -54%;
+}
+
+.orbit-rotator-4 {
+  width: 120%;
+  height: 120%;
+  margin-left: -60%;
+  margin-top: -60%;
+}
+
+/* Put each label slightly OUTSIDE its path, never toward the face */
+.orbit-item {
+  top: -11px;
+  gap: 7px;
+}
+
+.orbit-tag {
+  padding: 7px 10px;
+  font-size: 8.5px;
+}
+
+/* Make avatar a touch smaller to preserve a clean orbital gap */
+.avatar-shell {
+  width: 49%;
+}
+
+/* Allow the largest orbit to remain visible */
+.hero-visual {
+  overflow: visible;
+  padding-inline: 18px;
+}
+
+@media (max-width: 720px) {
+  .orbital-card-fixed {
+    width: min(375px, 92vw);
+  }
+
+  .ring-4,
+  .orbit-rotator-4 {
+    display: none;
+  }
+
+  .ring-1 { width: 86%; height: 86%; }
+  .ring-2 { width: 100%; height: 100%; }
+  .ring-3 { width: 114%; height: 114%; }
+
+  .orbit-rotator-1 {
+    width: 86%; height: 86%;
+    margin-left: -43%; margin-top: -43%;
+  }
+
+  .orbit-rotator-2 {
+    width: 100%; height: 100%;
+    margin-left: -50%; margin-top: -50%;
+  }
+
+  .orbit-rotator-3 {
+    width: 114%; height: 114%;
+    margin-left: -57%; margin-top: -57%;
+  }
+}
+
+/* =========================================================
+   v4d — project thumbnails
+   ========================================================= */
+
+.project-card {
+  overflow: hidden;
+}
+
+.card-thumbnail {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 155px;
+  margin: 20px 0 2px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #090d13;
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: #090d13;
+  transition: transform .35s cubic-bezier(.22,.61,.36,1), filter .35s ease;
+}
+
+.card-thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 62%, rgba(5,8,12,.72) 100%);
+  pointer-events: none;
+}
+
+.card-thumbnail-label {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 9px;
+  color: rgba(255,255,255,.92);
+  font: 500 8px/1 "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.card-thumbnail:hover img {
+  transform: scale(1.018);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 720px) {
+  .card-thumbnail {
+    height: 180px;
+  }
+}

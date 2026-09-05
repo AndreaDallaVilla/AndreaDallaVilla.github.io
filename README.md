@@ -66,3 +66,8 @@ so it follows the current GitHub avatar automatically.
 - All four orbit dots now visibly rotate on separate rings.
 - The cyan dot now definitely rotates; the outer orbit dot is also made visible.
 - The ALPINE image is wrapped in its own media frame, reduced further, and forced to use object-fit: contain so the full image shows.
+
+## v4d changes
+- Moved all orbit paths farther outside the profile photo so dots and labels no longer pass across the face.
+- Matched each rotator radius exactly to its visible ring.
+- Added the supplied video thumbnails for UR5, SICURA and RoadEye using the same compact visual treatment as ALPINE.
