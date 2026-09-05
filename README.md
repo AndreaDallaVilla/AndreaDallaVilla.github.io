@@ -100,3 +100,9 @@ Desktop behavior:
 - the UR5 joints change pose at every project.
 
 On smaller screens the same content remains accessible with a simplified non-sticky layout.
+
+
+## v5.1 motion polish
+- smoother UR5 motion with pick/carry/present phases
+- better card transition from the stack to the gripper
+- click or scroll the project steps to switch cards
