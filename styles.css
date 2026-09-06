@@ -1656,29 +1656,7 @@ footer {
 }
 
 
-/* ALPINE badge in the bottom-right corner of the whole featured box */
+/* Keep the ALPINE featured box as the positioning context for the shared badge */
 .project-featured {
   position: relative;
-}
-
-.alpine-box-badge {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  width: 40px !important;
-  height: 40px !important;
-  object-fit: contain;
-  opacity: 1;
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,.18));
-  pointer-events: none;
-  z-index: 4;
-}
-
-@media (max-width: 640px) {
-  .alpine-box-badge {
-    right: 12px;
-    bottom: 12px;
-    width: 36px !important;
-    height: 36px !important;
-  }
 }
