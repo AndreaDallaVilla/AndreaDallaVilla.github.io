@@ -1605,3 +1605,24 @@ footer {
     height: 22px !important;
   }
 }
+
+.roadeye-badge-bottom {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 36px !important;
+  height: 36px !important;
+  object-fit: contain;
+  opacity: 1;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,.18));
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .roadeye-badge-bottom {
+    right: 12px;
+    bottom: 12px;
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
