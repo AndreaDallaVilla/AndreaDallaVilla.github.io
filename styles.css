@@ -2306,3 +2306,173 @@ footer {
     bottom: 15% !important;
   }
 }
+
+
+/* =========================================================
+   FINAL orbit mobile fix:
+   1st orbit from center = ROS
+   2nd orbit = AI
+   3rd orbit = IoT
+   4th outer orbit = Hardware
+   ========================================================= */
+
+/* no dashed ring */
+.orbit-ring-2 {
+  border: 1px solid rgba(255,255,255,.12) !important;
+}
+
+@media (max-width: 720px) {
+  /* force all 4 orbit rings, runners and labels to exist on phone */
+  .orbit-ring-1,
+  .orbit-ring-2,
+  .orbit-ring-3,
+  .orbit-ring-4,
+  .orbit-runner-1,
+  .orbit-runner-2,
+  .orbit-runner-3,
+  .orbit-runner-4,
+  .orbit-label-1,
+  .orbit-label-2,
+  .orbit-label-3,
+  .orbit-label-4 {
+    display: block !important;
+  }
+
+  .hero-visual {
+    min-height: 360px !important;
+    overflow: visible !important;
+  }
+
+  .orbital-card-circular {
+    width: min(300px, 80vw) !important;
+    overflow: visible !important;
+  }
+
+  /* keep one orbit label per orbit, clearly separated */
+  .orbit-label {
+    position: absolute !important;
+    z-index: 6 !important;
+    font-size: 7px !important;
+    line-height: 1 !important;
+    padding: 5px 8px !important;
+    white-space: nowrap !important;
+    max-width: none !important;
+  }
+
+  /* 1st orbit from center */
+  .orbit-label-1 {
+    left: 17% !important;
+    top: 21% !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  /* 2nd orbit */
+  .orbit-label-2 {
+    right: 15% !important;
+    top: 17% !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+
+  /* 3rd orbit */
+  .orbit-label-3 {
+    left: 9% !important;
+    bottom: 16% !important;
+    top: auto !important;
+    right: auto !important;
+  }
+
+  /* 4th outer orbit */
+  .orbit-label-4 {
+    right: 4% !important;
+    bottom: 12% !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-visual {
+    min-height: 350px !important;
+  }
+
+  .orbital-card-circular {
+    width: min(282px, 78vw) !important;
+  }
+
+  .orbit-ring-1 { width: 72% !important; height: 72% !important; }
+  .orbit-ring-2 { width: 86% !important; height: 86% !important; }
+  .orbit-ring-3 { width: 101% !important; height: 101% !important; }
+  .orbit-ring-4 { width: 116% !important; height: 116% !important; }
+
+  .orbit-runner-1 { width: 72% !important; height: 72% !important; margin-left: -36% !important; margin-top: -36% !important; }
+  .orbit-runner-2 { width: 86% !important; height: 86% !important; margin-left: -43% !important; margin-top: -43% !important; }
+  .orbit-runner-3 { width: 101% !important; height: 101% !important; margin-left: -50.5% !important; margin-top: -50.5% !important; }
+  .orbit-runner-4 { width: 116% !important; height: 116% !important; margin-left: -58% !important; margin-top: -58% !important; }
+
+  .orbit-runner .orbit-dot {
+    width: 9px !important;
+    height: 9px !important;
+  }
+
+  .orbit-label {
+    font-size: 6.7px !important;
+    padding: 5px 7px !important;
+  }
+
+  .orbit-label-1 {
+    left: 16% !important;
+    top: 22% !important;
+  }
+
+  .orbit-label-2 {
+    right: 14% !important;
+    top: 18% !important;
+  }
+
+  .orbit-label-3 {
+    left: 8% !important;
+    bottom: 16% !important;
+  }
+
+  .orbit-label-4 {
+    right: 3% !important;
+    bottom: 12% !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-visual {
+    min-height: 330px !important;
+  }
+
+  .orbital-card-circular {
+    width: min(260px, 80vw) !important;
+  }
+
+  .orbit-label {
+    font-size: 6.2px !important;
+    padding: 4px 6px !important;
+  }
+
+  .orbit-label-1 {
+    left: 15% !important;
+    top: 22% !important;
+  }
+
+  .orbit-label-2 {
+    right: 13% !important;
+    top: 19% !important;
+  }
+
+  .orbit-label-3 {
+    left: 6% !important;
+    bottom: 16% !important;
+  }
+
+  .orbit-label-4 {
+    right: 2% !important;
+    bottom: 12% !important;
+  }
+}
