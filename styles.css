@@ -1660,3 +1660,405 @@ footer {
 .project-featured {
   position: relative;
 }
+
+
+/* =========================================================
+   Responsive final pass — phones + tablets
+   Desktop layout intentionally unchanged.
+   ========================================================= */
+
+@media (max-width: 980px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .hero-copy,
+  .hero-visual,
+  .about-layout > *,
+  .stack-layout > *,
+  .contact-panel > *,
+  .project-featured > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Decorative grid must not enlarge the document width. */
+  .hero-grid {
+    inset: -80px auto -40px 50% !important;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
+
+  .about-layout,
+  .stack-layout,
+  .contact-panel {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .project-card,
+  .project-featured {
+    min-width: 0;
+  }
+
+  .contact-row > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-row svg {
+    flex: 0 0 auto;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header,
+  .hero,
+  .section,
+  footer {
+    width: calc(100% - 28px) !important;
+    max-width: calc(100vw - 28px) !important;
+  }
+
+  .site-header {
+    gap: 12px;
+  }
+
+  .nav-cta {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .hero {
+    padding: 58px 0 68px !important;
+    gap: 24px !important;
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(44px, 13.2vw, 64px) !important;
+    line-height: .98;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  /* Four education/profile facts: 2x2 rather than squeezing into 3 columns. */
+  .mini-stats {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0;
+  }
+
+  .mini-stats > div,
+  .mini-stats > div:last-child {
+    min-width: 0;
+    margin: 0 !important;
+    padding: 12px 12px 12px 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .mini-stats > div:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .mini-stats strong,
+  .mini-stats span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .mini-stats strong {
+    font-size: 12px !important;
+    line-height: 1.25;
+  }
+
+  .mini-stats span {
+    margin-top: 3px;
+    font-size: 8px !important;
+    line-height: 1.4;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-height: 370px !important;
+    padding-inline: 0 !important;
+  }
+
+  .orbital-card-circular {
+    width: min(340px, 84vw) !important;
+    max-width: 100%;
+  }
+
+  .orbit-label-1 { left: 2% !important; }
+  .orbit-label-2 { right: 2% !important; }
+  .orbit-label-3 { left: 10% !important; }
+
+  .section {
+    padding: 68px 0 !important;
+  }
+
+  .section-heading {
+    gap: 18px;
+  }
+
+  .section h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .about-copy,
+  .stack-heading p,
+  .contact-panel p {
+    max-width: 100%;
+  }
+
+  .project-featured {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+    padding: 20px 20px 68px !important;
+    min-height: 0 !important;
+  }
+
+  .project-main {
+    min-width: 0;
+    padding: 4px 0 8px !important;
+  }
+
+  .project-main h3,
+  .project-card h3 {
+    overflow-wrap: break-word;
+  }
+
+  .project-main p,
+  .project-card p {
+    min-height: 0 !important;
+  }
+
+  .project-art.alpine-photo {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-self: stretch !important;
+    height: 190px !important;
+    margin: 0;
+  }
+
+  .alpine-media,
+  .alpine-photo img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .project-card {
+    min-height: 0 !important;
+    padding: 21px !important;
+  }
+
+  .card-thumbnail {
+    width: min(220px, 100%) !important;
+    max-width: 100% !important;
+  }
+
+  .chips {
+    max-width: 100%;
+  }
+
+  .project-links,
+  .card-actions {
+    gap: 13px !important;
+  }
+
+  .stack-group {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .quote-card {
+    min-height: 0 !important;
+    padding: 38px 24px !important;
+  }
+
+  .quote-card p {
+    max-width: 100%;
+  }
+
+  .contact-panel {
+    padding: 28px 22px !important;
+    gap: 30px !important;
+  }
+
+  .contact-row {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    padding-top: 50px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 12.8vw, 55px) !important;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mini-stats {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+  }
+
+  .mini-stats > div,
+  .mini-stats > div:nth-last-child(-n + 2),
+  .mini-stats > div:last-child {
+    padding: 10px 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+
+  .mini-stats > div:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .hero-visual {
+    min-height: 330px !important;
+  }
+
+  .orbital-card-circular {
+    width: min(295px, 82vw) !important;
+  }
+
+  .section {
+    padding: 58px 0 !important;
+  }
+
+  .section h2 {
+    font-size: clamp(34px, 10.8vw, 43px) !important;
+    line-height: 1.04;
+  }
+
+  .about-copy {
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .about-copy .lead {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .project-featured {
+    padding: 18px 18px 66px !important;
+  }
+
+  .project-main h3 {
+    font-size: clamp(30px, 10vw, 39px) !important;
+  }
+
+  .project-art.alpine-photo {
+    height: 170px !important;
+    padding: 9px !important;
+  }
+
+  .project-card {
+    padding: 19px !important;
+  }
+
+  .project-card h3 {
+    font-size: 27px;
+  }
+
+  .card-thumbnail {
+    height: 138px !important;
+  }
+
+  .stack-group {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .quote-card {
+    padding: 34px 20px !important;
+  }
+
+  .quote-card p {
+    font-size: clamp(28px, 9.5vw, 38px) !important;
+  }
+
+  .contact-panel {
+    padding: 24px 18px !important;
+    border-radius: 20px;
+  }
+
+  .contact-row {
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  footer {
+    align-items: flex-start;
+    gap: 12px !important;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 350px) {
+  .site-header,
+  .hero,
+  .section,
+  footer {
+    width: calc(100% - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+
+  .nav-cta {
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 39px !important;
+  }
+
+  .orbital-card-circular {
+    width: min(270px, 82vw) !important;
+  }
+
+  .project-featured,
+  .project-card {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .contact-panel {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
