@@ -1610,8 +1610,8 @@ footer {
   position: absolute;
   right: 14px;
   bottom: 14px;
-  width: 36px !important;
-  height: 36px !important;
+  width: 40px !important;
+  height: 40px !important;
   object-fit: contain;
   opacity: 1;
   filter: drop-shadow(0 3px 8px rgba(0,0,0,.18));
@@ -1622,7 +1622,34 @@ footer {
   .roadeye-badge-bottom {
     right: 12px;
     bottom: 12px;
-    width: 32px !important;
-    height: 32px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+
+/* Same gold patent badge also on ALPINE */
+.project-featured {
+  position: relative;
+}
+
+.patent-badge-bottom {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain;
+  opacity: 1;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,.18));
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .patent-badge-bottom {
+    right: 12px;
+    bottom: 12px;
+    width: 36px !important;
+    height: 36px !important;
   }
 }
