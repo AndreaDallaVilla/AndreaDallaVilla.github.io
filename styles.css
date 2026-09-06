@@ -1628,12 +1628,12 @@ footer {
 }
 
 
-/* Same gold patent badge also on ALPINE */
-.project-featured {
+/* Same patent badge inside the ALPINE image box, bottom-right, same size as RoadEye */
+.alpine-photo {
   position: relative;
 }
 
-.patent-badge-bottom {
+.alpine-badge-bottom {
   position: absolute;
   right: 14px;
   bottom: 14px;
@@ -1643,10 +1643,11 @@ footer {
   opacity: 1;
   filter: drop-shadow(0 3px 8px rgba(0,0,0,.18));
   pointer-events: none;
+  z-index: 3;
 }
 
 @media (max-width: 640px) {
-  .patent-badge-bottom {
+  .alpine-badge-bottom {
     right: 12px;
     bottom: 12px;
     width: 36px !important;
