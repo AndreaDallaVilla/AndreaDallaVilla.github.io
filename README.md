@@ -126,3 +126,10 @@ On smaller screens the same content remains accessible with a simplified non-sti
 - The project bar stays fully visible and clickable at the bottom of the presenter.
 - While the Work section is active, scrolling cycles through the projects first.
 - The page continues to the next section only after the last project.
+
+## v5.5 click pick-and-place
+- Removed the scroll-driven repo switching.
+- The repo selectors are now visible cards above the animation.
+- Clicking a repo card triggers the robot to pick it from the upper source area and place it into the main project card.
+- The first project shown by default is ALPINE.
+- The project selector cards are styled more like the v4g boxes.

@@ -2992,3 +2992,317 @@ footer {
     transform: scale(.78);
   }
 }
+
+
+/* =========================================================
+   v5.5 — click to pick UI like v4g cards
+   ========================================================= */
+
+.robot-showcase {
+  position: relative;
+  min-height: 0 !important;
+  padding-bottom: 72px;
+}
+
+.presenter-layout {
+  display: block !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.presenter-sticky {
+  position: relative !important;
+  top: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.presenter-window {
+  position: relative;
+  width: min(100%, 1120px);
+  height: 820px !important;
+  min-height: 820px !important;
+  margin: 0 auto;
+  padding-top: 176px;
+  padding-bottom: 42px;
+  border-radius: 30px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.presenter-window::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 96px;
+  background: linear-gradient(180deg, rgba(9,14,21,0) 0%, rgba(9,14,21,.20) 18%, rgba(9,14,21,.55) 100%);
+  pointer-events: none;
+}
+
+.project-scroll-track,
+.repo-stack {
+  display: none !important;
+}
+
+/* Put the picker ABOVE and make it clearly clickable */
+.presenter-progress {
+  position: absolute;
+  z-index: 14;
+  left: 24px;
+  right: 24px;
+  top: 58px;
+  bottom: auto;
+  transform: none !important;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: none !important;
+  width: auto !important;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.presenter-progress::before {
+  content: "CLICK A PROJECT — THE UR5 PICKS IT FROM HERE";
+  position: absolute;
+  left: 2px;
+  top: -28px;
+  color: var(--accent);
+  font: 500 9px/1 "DM Mono", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.presenter-progress-item {
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 5px;
+  min-height: 72px;
+  padding: 14px 16px 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.042), rgba(255,255,255,.02));
+  box-shadow: 0 12px 28px rgba(0,0,0,.16);
+  cursor: pointer;
+  color: #cfd7e2;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.presenter-progress-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(105,226,255,.34);
+  box-shadow: 0 16px 32px rgba(0,0,0,.20);
+  background: linear-gradient(145deg, rgba(105,226,255,.06), rgba(255,255,255,.03));
+}
+
+.presenter-progress-item.active {
+  border-color: rgba(105,226,255,.42);
+  background: linear-gradient(145deg, rgba(105,226,255,.11), rgba(255,255,255,.04));
+  box-shadow: 0 18px 36px rgba(0,0,0,.24);
+}
+
+.presenter-progress-item span {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.11);
+  background: rgba(255,255,255,.04);
+  color: #8ea1b9;
+  font: 500 8px/1 "DM Mono", monospace;
+  opacity: 1;
+}
+
+.presenter-progress-item b {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  white-space: normal;
+  text-align: left;
+}
+
+.presenter-progress-item em {
+  font: 500 8px/1 "DM Mono", monospace;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .11em;
+  color: #8df7c7;
+}
+
+.presenter-progress-item.active span {
+  color: #081018;
+  background: rgba(255,255,255,.88);
+}
+
+.presenter-progress-item.active em {
+  color: var(--accent);
+}
+
+/* Re-layout the robot to pick from the upper row and place in the main card */
+.ur5-robot {
+  left: 10%;
+  bottom: 7%;
+  width: 44%;
+  max-width: 495px;
+  min-width: 360px;
+  transform-origin: 34% 82%;
+  will-change: transform;
+}
+
+.presenter-window:not(.is-switching) .ur5-robot svg {
+  animation: robot-idle-hover 4.8s ease-in-out infinite;
+  transform-origin: 34% 82%;
+}
+
+.presenter-window.is-switching .ur5-robot svg {
+  animation: none;
+}
+
+@keyframes robot-idle-hover {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+.gripped-project {
+  left: 53%;
+  right: auto;
+  top: 60%;
+  width: min(420px, 38%);
+  max-width: 420px;
+  min-width: 340px;
+  transform: translate(0, -50%);
+  filter: drop-shadow(0 28px 58px rgba(0,0,0,.26));
+}
+
+.project-motion-layer {
+  will-change: transform, opacity, filter;
+  transform-origin: 14% 8% !important;
+  border-radius: 24px;
+  box-shadow: 0 26px 60px rgba(0,0,0,.28);
+}
+
+.gripped-media {
+  height: 205px;
+}
+
+.gripped-content h3 {
+  font-size: clamp(30px, 3vw, 42px);
+}
+
+.gripped-content p {
+  font-size: 13px;
+  line-height: 1.68;
+}
+
+.gripped-links a {
+  font-size: 11.5px;
+}
+
+.presenter-caption {
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%);
+  z-index: 16;
+  max-width: calc(100% - 40px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.grip-contact {
+  display: none !important;
+}
+
+.finger {
+  will-change: transform;
+}
+
+.robot-showcase + .stack {
+  position: relative;
+  z-index: 5;
+}
+
+/* Mobile and smaller screens */
+@media (max-width: 980px) {
+  .presenter-window {
+    height: 880px !important;
+    min-height: 880px !important;
+    padding-top: 228px;
+  }
+
+  .presenter-progress {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gripped-project {
+    left: 50%;
+    top: 45%;
+    width: min(92%, 395px);
+    min-width: 0;
+    transform: translateX(-50%);
+  }
+
+  .ur5-robot {
+    left: 50%;
+    bottom: 10px;
+    width: 92%;
+    max-width: 520px;
+    min-width: 0;
+    transform: translateX(-59%);
+  }
+}
+
+@media (max-width: 620px) {
+  .presenter-window {
+    height: 940px !important;
+    min-height: 940px !important;
+    padding-top: 314px;
+  }
+
+  .presenter-progress {
+    left: 14px;
+    right: 14px;
+    top: 52px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .presenter-progress::before {
+    top: -24px;
+    font-size: 8px;
+  }
+
+  .presenter-progress-item {
+    min-height: 68px;
+    padding: 12px 14px;
+  }
+
+  .gripped-project {
+    top: 41%;
+    width: calc(100% - 20px);
+  }
+
+  .gripped-media {
+    height: 185px;
+  }
+
+  .ur5-robot {
+    width: 104%;
+    transform: translateX(-61%);
+  }
+
+  .presenter-caption {
+    top: 12px;
+    white-space: normal;
+  }
+}
