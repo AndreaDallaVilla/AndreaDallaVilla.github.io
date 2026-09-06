@@ -2062,3 +2062,103 @@ footer {
     padding-right: 16px !important;
   }
 }
+
+
+/* =========================================================
+   Mobile orbit fix — always show all 4 dots + labels
+   ========================================================= */
+
+@media (max-width: 720px) {
+  .orbit-ring-4,
+  .orbit-runner-4 {
+    display: block !important;
+  }
+
+  .orbit-label {
+    display: block !important;
+    font-size: 8px !important;
+    padding: 6px 9px !important;
+    line-height: 1 !important;
+  }
+
+  .orbit-label-1 {
+    left: 3% !important;
+    top: 22% !important;
+  }
+
+  .orbit-label-2 {
+    right: 3% !important;
+    top: 39% !important;
+  }
+
+  .orbit-label-3 {
+    left: 11% !important;
+    bottom: 9% !important;
+  }
+
+  .orbit-label-4 {
+    right: 4% !important;
+    bottom: 17% !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-visual {
+    min-height: 350px !important;
+  }
+
+  .orbital-card-circular {
+    width: min(275px, 76vw) !important;
+  }
+
+  .orbit-label {
+    display: block !important;
+    font-size: 7px !important;
+    padding: 5px 7px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .orbit-label-1 {
+    left: 2% !important;
+    top: 20% !important;
+  }
+
+  .orbit-label-2 {
+    right: 2% !important;
+    top: 39% !important;
+  }
+
+  .orbit-label-3 {
+    left: 7% !important;
+    bottom: 7% !important;
+  }
+
+  .orbit-label-4 {
+    right: 2% !important;
+    bottom: 16% !important;
+  }
+
+  .orbit-runner .orbit-dot {
+    width: 9px !important;
+    height: 9px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-visual {
+    min-height: 325px !important;
+  }
+
+  .orbital-card-circular {
+    width: min(245px, 74vw) !important;
+  }
+
+  .orbit-label {
+    font-size: 6.5px !important;
+    padding: 5px 6px !important;
+  }
+
+  .orbit-label-3 {
+    left: 5% !important;
+  }
+}
