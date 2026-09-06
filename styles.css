@@ -1565,16 +1565,16 @@ footer {
 }
 
 .roadeye-badge {
-  width: 48px;
-  height: 48px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
-  filter: drop-shadow(0 6px 16px rgba(105, 226, 255, 0.18));
-  opacity: 0.95;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.18));
+  opacity: 0.96;
 }
 
 @media (max-width: 640px) {
   .roadeye-badge {
-    width: 42px;
-    height: 42px;
+    width: 24px;
+    height: 24px;
   }
 }
