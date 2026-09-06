@@ -1537,3 +1537,18 @@ footer {
     height: 145px !important;
   }
 }
+
+
+/* Education stats: fit the four requested items cleanly */
+.mini-stats > div {
+  min-width: 0;
+  flex: 1 1 0;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+.mini-stats strong {
+  font-size: 14px;
+}
+.mini-stats span {
+  line-height: 1.35;
+}
