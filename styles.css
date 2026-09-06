@@ -2571,3 +2571,20 @@ footer {
     padding: 4px 5px !important;
   }
 }
+
+
+/* RoadEye action buttons: video + website */
+.roadeye-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  padding-right: 54px;
+}
+
+@media (max-width: 430px) {
+  .roadeye-actions {
+    gap: 12px;
+    padding-right: 48px;
+  }
+}
