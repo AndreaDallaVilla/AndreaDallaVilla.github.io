@@ -2761,3 +2761,19 @@ footer {
     height: 36px;
   }
 }
+
+
+/* Final tool-logo pass:
+   keep ALL logos already colored, with no grayscale
+   and no color change on hover. */
+.tools-grid .tool-card img {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none;
+}
+
+.tools-grid .tool-card:hover img {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
