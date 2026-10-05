@@ -2716,3 +2716,48 @@ footer {
 
   .tool-card > span:last-child { text-align: left; }
 }
+
+
+/* Correct product logos: preserve their original colors and proportions. */
+.tool-card img.tool-logo-original {
+  filter: none !important;
+  opacity: 1 !important;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  transform: none;
+}
+
+.tool-card:hover img.tool-logo-original {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+.tool-card img.tool-logo-wide {
+  width: 58px;
+  height: 38px;
+}
+
+.tool-card img.tool-logo-rviz {
+  width: 62px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+@media (max-width: 560px) {
+  .tool-card img.tool-logo-original {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tool-card img.tool-logo-wide {
+    width: 52px;
+    height: 34px;
+  }
+
+  .tool-card img.tool-logo-rviz {
+    width: 56px;
+    height: 36px;
+  }
+}
